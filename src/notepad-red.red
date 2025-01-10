@@ -332,7 +332,12 @@ view/options [
             ]
             
             if e/picked = 'mi_font [
-                _font: request-font/font _editor/font
+                _font: none
+                either _editor/font <> none [
+                    _font: request-font/font _editor/font
+                ] [
+                    _font: request-font
+                ]
                 if _font <> none [
                     _editor/font: _font
                 ]
