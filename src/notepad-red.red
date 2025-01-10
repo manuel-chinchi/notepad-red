@@ -100,7 +100,6 @@ view/options [
         on-menu: func [f [object!] e [event!]] [
         
             if e/picked = 'mi_new [
-                print 111
                 _file_exists: exists? fnc_tofile _current_file
                 _editor_empty: (length? fnc_tostring _editor/text) = 0
                 _has_changes: none
@@ -131,14 +130,15 @@ view/options [
                         ;print {case4: not _file_exists & not _editor_empty}
                         _result: dlg_msgbox "¿Desea guardar los cambios?"
                         if _result <> none [
-                            if _result = true [
+                            either _result = true [
                                 _file: request-file/save/title "Guardar"
                                 if _file <> none [
                                     write _file _editor/text
                                     _editor/text: none
                                 ]
+                            ] [
+                                _editor/text: none
                             ]
-                            _editor/text: none
                         ]
                     ]
                 ]
