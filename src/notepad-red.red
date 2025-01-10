@@ -383,14 +383,15 @@ view/options [
                             _file: request-file/save/title "Guardar"
                             if _file <> none [
                                 write _file _editor/text
+                                quit
                             ]
-                            quit
                         ] [
                             quit
                         ]
                     ]
                 ]
             ]
+            view f
         ]
 
         on-resizing: func [f [object!] e [event!]] [

@@ -3,7 +3,7 @@ Un editor de texto sencillo hecho completamente en lenguaje RED.
 
 ## Referencias
 * [Red VID > Dialogs](https://www.red-by-example.org/vid.html)
-
+* [Red VID > Events](https://www.red-by-example.org/#cat-e04)
 ## Capturas
 
 <p align="center">
@@ -12,7 +12,7 @@ Un editor de texto sencillo hecho completamente en lenguaje RED.
 
 ## TODO
 
-* cancelar salida por defecto en evento **on-close**
+* ~~cancelar salida por defecto en evento **on-close**~~
 * implementar acciones del menu **Edición > mi_undo | mi_cut | mi_copy | mi_paste**.
 * implementar atajos de teclado en evento **on-key**.
 * evento **on-close** y acción de menu **mi_exit** son iguales. modularizar.
