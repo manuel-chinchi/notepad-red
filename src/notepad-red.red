@@ -51,7 +51,7 @@ dlg_msgbox: func [_msg [string!]] [
 fnc_updatestatusbar: func [_text _area] [
     _length: length? fnc_tostring _area/text
     _lines: length? split (fnc_tostring _area/text) "^/"
-    _text/text: rejoin ["Líneas: " _lines ", Largo: " _length]
+    _text/text: rejoin ["Líneas " _lines ", Largo " _length]
 ]
 
 ; variables
