@@ -7,7 +7,7 @@ Un editor de texto sencillo hecho completamente en lenguaje RED.
 ## Capturas
 
 <p align="center">
-    <img src="screenshots/2025-01-10 15_33_59-NotepadRed.png" width="334">
+    <img src="screenshots/2025-01-11 15_59_31-NotepadRed.png" width="334">
 </p>
 
 ## TODO

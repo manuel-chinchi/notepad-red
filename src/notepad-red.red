@@ -48,6 +48,12 @@ dlg_msgbox: func [_msg [string!]] [
     return _result
 ]
 
+fnc_updatestatusbar: func [_text _area] [
+    _length: length? fnc_tostring _area/text
+    _lines: length? split (fnc_tostring _area/text) "^/"
+    _text/text: rejoin ["Líneas: " _lines ", Largo: " _length]
+]
+
 ; variables
 ; -----------------------------------------------------------------------------
 _appname: "Red Notepad"
@@ -57,6 +63,9 @@ _author: "Manuel Chinchi"
 _size_editor: 320x240
 _text_editor: ""
 _current_file: none
+
+_size_statusbar: 320x22
+_text_statusbar: none
 
 ; main
 ; -----------------------------------------------------------------------------
@@ -69,6 +78,20 @@ view/options [
         font-name "courier new"
         font-size 11
         focus
+        on-change [
+            fnc_updatestatusbar
+                _text_statusbar
+                _editor
+        ]
+    at 0x218
+    _statusbar: panel
+        _size_statusbar
+        [
+            at 0x0
+            _bordertop_statusbar: base 145.145.145 352x1
+            at 5x3
+            _text_statusbar: text "" 200x18
+        ]
 ] [
     text: _appname
     size: _size_editor
@@ -142,6 +165,9 @@ view/options [
                         ]
                     ]
                 ]
+                fnc_updatestatusbar
+                    _text_statusbar
+                    _editor
             ]
             
             if e/picked = 'mi_open [
@@ -212,6 +238,9 @@ view/options [
                         ]
                     ]
                 ]
+                fnc_updatestatusbar
+                    _text_statusbar
+                    _editor
             ]
             
             if e/picked = 'mi_save [
@@ -272,7 +301,10 @@ view/options [
                             ]
                         ]
                     ]
-                ]                
+                ]
+                fnc_updatestatusbar
+                    _text_statusbar
+                    _editor
             ]
             
             if e/picked = 'mi_exit [
@@ -401,10 +433,18 @@ view/options [
 
         on-resizing: func [f [object!] e [event!]] [
             _editor/size: f/size
+            _editor/size/y: (f/size/y - _statusbar/size/y)
+            _statusbar/offset/y: _editor/size/y
+            _statusbar/size/x: _editor/size/x
+            _bordertop_statusbar/size/x: _editor/size/x
         ]
         
         on-resize: func [f [object!] e [event!]] [
             _editor/size: f/size
+            _editor/size/y: (f/size/y - _statusbar/size/y)
+            _statusbar/offset/y: _editor/size/y
+            _statusbar/size/x: _editor/size/x
+            _bordertop_statusbar/size/x: _editor/size/x
         ]
         
         ;#NOTE 'on-create' solamente usa el parametro face
@@ -416,6 +456,12 @@ view/options [
                 f/text: "Sin título"
                 _editor/text: _text_editor
             ]
+
+            _length: to string! length? _editor/text
+            _lines: length? split _editor/text "^/"
+            fnc_updatestatusbar
+                _text_statusbar
+                _editor
         ]
     ]
 ]
