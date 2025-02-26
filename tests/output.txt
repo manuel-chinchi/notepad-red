@@ -1,0 +1,20 @@
+file: functions.red 
+
+A: f_to_string
+test A1 ok
+test A2 ok
+test A3 error
+test A4 ok
+
+B: f_path_exists
+test B1 ok
+test B2 ok
+test B3 ok
+test B4 ok
+
+C: f_to_file
+test C1 ok
+test C2 ok
+test C3 ok
+test C4 ok
+test C5 ok
