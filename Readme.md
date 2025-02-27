@@ -6,21 +6,21 @@ Text editor made in Red language.
 * Line and chars count (status bar)
 * Font selection
 
-## Hoe run this?
+## How run this?
 
-1. Download the project and stand inside its folder
+1. Download the project and navigate to its folder
 
-2. Open a terminal an run the next command
+2. Open a terminal and run the following command
 
-if use a integrated client bash. (GitBash, ConEmu, Commander, etc.)
-```
-interpreter/red.exe --cli src/notepad-red.red
-```
+    if you are using a integrated client bash. (GitBash, ConEmu, Cmder, etc.)
+    ```
+    interpreter/red.exe --cli src/notepad-red.red
+    ```
 
-if use teminal of Windows (cmd)
-```
-interpreter\red.exe --cli src\notepad-red.red
-```
+    or if you use of Windows (cmd)
+    ```
+    interpreter\red.exe --cli src\notepad-red.red
+    ```
 
 
 ## Screenshots

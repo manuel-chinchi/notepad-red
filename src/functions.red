@@ -23,9 +23,10 @@ f_to_file: func [_path] [
 
 ; TODO dar soporte para "/", no lo toma actualmente
 f_get_parent_dir: func [
-{Devuelve el directorio de nivel superior de _path. Si _path es un
+{Devuelve el directorio de nivel superior del path. Si el path es un
 directorio raíz que no tiene nivel superior entonces devuelve none}
     _path [string!]] [
+
     reverse _path ; invierto el path in situ
     _path: next _path ; elimino primer "\"
     ; si _path es por ej. "c:/" luego de esta instruccion será none
@@ -35,8 +36,11 @@ directorio raíz que no tiene nivel superior entonces devuelve none}
 ]
 
 ; TODO hacer mas pruebas
-f_find_file_in_path: func [_path [string!] _file [string!]] [
-    ; NOTE con esto es suficiente?
+f_find_file_in_path: func [
+{Busca el archivo en alguna ubicación relativa al path. Si la encuentra
+devuelve el path del archivo sino devuelve none}
+    _path [string!] _file [string!]] [
+
     _file: replace/all _file "/" "\"
     _path_file: rejoin [_path _file]
     while [true] [
