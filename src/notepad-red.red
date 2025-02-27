@@ -67,7 +67,12 @@ STR_DLG_SAVE_TITLE: "Guardar"
 g_args: system/options/args
 
 if not empty? g_args [
-    g_current_file: to file! first g_args
+    _path_file: f_find_file_in_path get-current-dir (first g_args)
+    either _path_file <> none [
+        g_current_file: to file! _path_file
+    ] [
+        g_current_file: to file! first g_args
+    ]
 ]
 
 ; main

@@ -6,6 +6,23 @@ Text editor made in Red language.
 * Line and chars count (status bar)
 * Font selection
 
+## Hoe run this?
+
+1. Download the project and stand inside its folder
+
+2. Open a terminal an run the next command
+
+if use a integrated client bash. (GitBash, ConEmu, Commander, etc.)
+```
+interpreter/red.exe --cli src/notepad-red.red
+```
+
+if use teminal of Windows (cmd)
+```
+interpreter\red.exe --cli src\notepad-red.red
+```
+
+
 ## Screenshots
 <p align="center">
     <img src=".resources/screenshots/NotepadRed_2.png" width="334">
@@ -21,6 +38,9 @@ Text editor made in Red language.
 * [red-language-documentation.readthedocs.com](https://red-language-documentation.readthedocs.io/en/latest/Coding-Style-Guide/)
 * [redprogramming.com](https://redprogramming.com/Getting%20Started.html)
 * [chenyitian.gitbooks.io (various tutorials)](https://chenyitian.gitbooks.io/getting-started-with-red/content/docs/fundamentals.html#37-loops)
+* [redlanguage.blogspot](https://redlanguageblog.blogspot.com/)
+* [red.github.io](https://red.github.io/)
+* [red personal user blog](https://jennyk36.blogspot.com/)
 
 ## Author's note
 
