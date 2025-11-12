@@ -24,7 +24,7 @@ to the REBOL language)
 
 ## Screenshots
 <p align="center">
-    <img src=".resources/screenshots/NotepadRed_2.png" width="334">
+    <img src="Readme/img/notepad-gui.png" width="322">
 </p>
 
 ## References
