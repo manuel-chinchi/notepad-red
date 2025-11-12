@@ -1,10 +1,27 @@
 # Notepad Red
-Text editor made in Red language.
+Simple text editor written in the Red programming language (similar 
+to the REBOL language)
 
-## Overview
-* Reading and writing files
-* Line and chars count (status bar)
+## Features
+* Read and write .txt files
+* Line and characters counter (status bar)
 * Font selection
+
+## Usage (steps)
+1. Download this repository
+2. Locate yourself within the repository folder (`notepad-red` folder)
+3. Open a Windows terminal, navigate to the repository folder, and run 
+the following command
+    ```
+    interpreter/red.exe src/notepad-red.red
+    ```
+    Or optionally in client mode (without opening the Red interpreter)
+
+    ```
+    interpreter/red --cli src/notepad-red.red
+    ```
+    and finally press `Enter`. A window will then open with the script running
+
 
 ## Screenshots
 <p align="center">
@@ -21,14 +38,16 @@ Text editor made in Red language.
 * [red-language-documentation.readthedocs.com](https://red-language-documentation.readthedocs.io/en/latest/Coding-Style-Guide/)
 * [redprogramming.com](https://redprogramming.com/Getting%20Started.html)
 * [chenyitian.gitbooks.io (various tutorials)](https://chenyitian.gitbooks.io/getting-started-with-red/content/docs/fundamentals.html#37-loops)
+* [examples](https://wesleyhill.co.uk/p/writing-gui-apps-using-the-red-programming-language/)
+* [development](https://static.red-lang.org/red-system-specs.html)
 
 ## Author's note
 
-Except for the mentioned links, there is not much information about the 
-network language, nor can you find many examples on the Internet, and 
-the few communities or forums that are found seem to be strangely 
-abandoned or with little participation. I hope this example is useful 
-for anyone who wants to venture into this strange and powerful language.
+Aside from the links mentioned, there isn't much information available 
+about the network language, nor are there many examples online, and the 
+few communities or forums that exist seem strangely abandoned or have 
+little participation. I hope this example will be useful for anyone who 
+wants to delve into this unique and powerful programming language.
 
 
 
