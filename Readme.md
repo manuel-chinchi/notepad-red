@@ -10,8 +10,7 @@ to the REBOL language)
 ## Usage (steps)
 1. Download this repository
 2. Locate yourself within the repository folder (`notepad-red` folder)
-3. Open a Windows terminal, navigate to the repository folder, and run 
-the following command
+3. Open a Windows terminal and run the following command
     ```
     interpreter/red.exe src/notepad-red.red
     ```
