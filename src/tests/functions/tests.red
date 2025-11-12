@@ -3,7 +3,7 @@ Red [
     date: 24/Feb/25
 ]
 
-do %../src/functions.red ; cargo archivo de funciones
+do %../../functions.red ; cargar archivo de funciones
 
 f_assert: func [param1 param2 out_ok [string!] out_err [string!]] [
     either param1 = param2 [
